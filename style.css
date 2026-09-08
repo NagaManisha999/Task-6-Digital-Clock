@@ -1,0 +1,584 @@
+/* ========================================
+   Variables
+======================================== */
+
+:root {
+
+    --primary: #635bff;
+    --primary-dark: #5148e5;
+
+    --dark: #111827;
+    --text: #475569;
+    --muted: #64748b;
+
+    --white: #ffffff;
+    --background: #f8fafc;
+
+    --border: #e2e8f0;
+
+    --star: #f59e0b;
+
+    --container-width: 1050px;
+
+    --radius: 20px;
+
+    --transition: 0.4s ease;
+}
+
+
+/* ========================================
+   Reset
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background-color: var(--background);
+
+    color: var(--text);
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   Testimonials Section
+======================================== */
+
+.testimonials {
+
+    min-height: 100vh;
+
+    padding: 90px 20px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: var(--container-width);
+
+    margin: auto;
+}
+
+
+/* ========================================
+   Section Heading
+======================================== */
+
+.section-heading {
+
+    max-width: 680px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.section-heading h1 {
+
+    margin-bottom: 18px;
+
+    color: var(--dark);
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+}
+
+
+.section-heading h1 span {
+
+    display: block;
+
+    color: var(--primary);
+}
+
+
+.section-heading p {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+
+/* ========================================
+   Slider
+======================================== */
+
+.testimonial-slider {
+
+    position: relative;
+
+    overflow: hidden;
+
+    max-width: 760px;
+
+    margin: auto;
+}
+
+
+.testimonial-track {
+
+    display: flex;
+
+    transition:
+        transform 0.6s
+        cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ========================================
+   Testimonial Card
+======================================== */
+
+.testimonial-card {
+
+    position: relative;
+
+    min-width: 100%;
+
+    padding: 45px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background-color: var(--white);
+
+    box-shadow:
+        0 15px 40px
+        rgba(15, 23, 42, 0.06);
+}
+
+
+/* ========================================
+   Quote
+======================================== */
+
+.quote-mark {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 30px;
+
+    color: #eef2ff;
+
+    font-family: Georgia, serif;
+
+    font-size: 100px;
+
+    line-height: 1;
+
+    user-select: none;
+}
+
+
+/* ========================================
+   Rating
+======================================== */
+
+.rating {
+
+    position: relative;
+
+    margin-bottom: 25px;
+
+    color: var(--star);
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+}
+
+
+.empty-star {
+
+    color: #cbd5e1;
+}
+
+
+/* ========================================
+   Testimonial Text
+======================================== */
+
+blockquote {
+
+    position: relative;
+
+    margin-bottom: 35px;
+
+    color: var(--dark);
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    line-height: 1.7;
+}
+
+
+blockquote::before {
+
+    content: "“";
+}
+
+
+/* ========================================
+   Customer
+======================================== */
+
+.customer {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.avatar {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+.avatar-one {
+    background-color: #6366f1;
+}
+
+
+.avatar-two {
+    background-color: #0f766e;
+}
+
+
+.avatar-three {
+    background-color: #db2777;
+}
+
+
+.avatar-four {
+    background-color: #ea580c;
+}
+
+
+.customer h3 {
+
+    margin-bottom: 2px;
+
+    color: var(--dark);
+
+    font-size: 15px;
+}
+
+
+.customer p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   Controls
+======================================== */
+
+.slider-controls {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+.slider-button {
+
+    width: 44px;
+
+    height: 44px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background-color: var(--white);
+
+    color: var(--dark);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+
+.slider-button:hover {
+
+    background-color: var(--primary);
+
+    border-color: var(--primary);
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+.slider-button:focus-visible {
+
+    outline: 3px solid
+        rgba(99, 91, 255, 0.25);
+
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   Dots
+======================================== */
+
+.dots {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #cbd5e1;
+
+    cursor: pointer;
+
+    transition:
+        width var(--transition),
+        background-color var(--transition);
+}
+
+
+.dot.active {
+
+    width: 24px;
+
+    border-radius: 10px;
+
+    background-color: var(--primary);
+}
+
+
+/* ========================================
+   Trust Message
+======================================== */
+
+.trust-message {
+
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.trust-message strong {
+
+    color: var(--dark);
+
+    font-size: 17px;
+}
+
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 700px) {
+
+    .testimonials {
+
+        padding: 70px 15px;
+    }
+
+
+    .testimonial-card {
+
+        padding: 35px 25px;
+    }
+
+
+    blockquote {
+
+        font-size: 18px;
+    }
+
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 480px) {
+
+    .section-heading {
+
+        margin-bottom: 35px;
+    }
+
+
+    .section-heading h1 {
+
+        font-size: 34px;
+    }
+
+
+    .section-heading p {
+
+        font-size: 15px;
+    }
+
+
+    .testimonial-card {
+
+        padding: 30px 22px;
+    }
+
+
+    .quote-mark {
+
+        right: 15px;
+
+        font-size: 75px;
+    }
+
+
+    blockquote {
+
+        font-size: 17px;
+
+        line-height: 1.6;
+    }
+
+
+    .trust-message {
+
+        flex-direction: column;
+
+        gap: 2px;
+    }
+
+}
+
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+    }
+
+
+    .testimonial-track {
+
+        transition: none;
+    }
+
+}
